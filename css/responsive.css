@@ -1,0 +1,49 @@
+@media (max-width: 1300px) {
+    #Register .body form{
+    width: 280px;
+}
+#Search .input-group{
+    width: 250px;
+}
+#Data table{
+    width: max-content;
+}
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {
+
+}
+
+@media (min-width: 577px) and (max-width: 1300px) {
+    #Register .body form{
+        width: 350px;
+    }
+    #Search .input-group{
+        width: 300px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    #Register .body form{
+        width: 400px;
+    }
+    #Search .input-group{
+        width: 350px;
+    }
+    #Data table{
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+     #Register .body form{
+            width: 500px;
+        }
+        #Search .input-group{
+            width: 300px;
+        }
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+
+}

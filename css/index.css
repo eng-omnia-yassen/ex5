@@ -1,0 +1,36 @@
+:root{
+    --mainColor:#ac8243;
+}
+body{
+    background: #141e30;
+    background: -webkit-linear-gradient(to right,#243b55,#141e30);
+    background: linear-gradient(to right, #243b55, #141e30);
+}
+#Register .body form{
+    background: #ada996;
+    background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+#Register .body form>i{
+    color: var(--mainColor);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+} 
+.input-group  i{
+    color: var(--mainColor);
+}
+#Register .body form h3{
+    color: var(--mainColor);
+}
+#Search .input-group{
+    width: 300px;
+}
+#Data .table-responsive{
+    border-radius: 5px;
+    width: 85%;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemiCode : Exercise_05</title>
+    <link rel="icon" href="images/logo-be01d065.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <section id="Register">
+        <div class="container">
+            <div class="head my-5 text-center" >
+                <img src="images/logo-be01d065.png" alt="logo-be01d065" >
+            </div>
+            <div class="body">
+                <form action="" class="m-auto  mb-5 px-3  py-4" data-type="add">
+                    <h3 class="text-center mb-4">Students System</h3>
+                    <i class="fa-solid fa-arrow-rotate-left d-none"></i>
+                    <div class="input-group mb-3">
+                        <label for="First-Name" class="input-group-text">
+                        <i class="fa-solid fa-user"></i>
+                        </label>
+                      <input type="text" class="form-control active" placeholder="First Name *" name="firstName" id="First-Name" aria-label="Username" aria-describedby="basic-addon1" onblur="checkInput(this)" data-valid="false">
+                    </div>
+                    <p class="alert alert-danger d-none" role="alert" data-error-name="firstName"></p>
+                    <div class="input-group mb-3">
+                        <label for="Last-Name" class="input-group-text">
+                        <i class="fa-solid fa-user"></i>
+                        </label>
+                      <input type="text" class="form-control" placeholder="Last Name *" name="lastName" id="Last-Name" aria-label="Username" aria-describedby="basic-addon1" onblur="checkInput(this)" data-valid="false">
+                    </div>
+                    <p class="alert alert-danger d-none" role="alert" data-error-name="lastName"></p>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        </label>
+                      <input type="text" class="form-control" placeholder="Email *" name="email" id="Email" aria-label="Username" aria-describedby="basic-addon1" onblur="checkInput(this)" data-valid="false">
+                    </div>
+                    <p class="alert alert-danger d-none" role="alert" data-error-name="email"></p>
+                    <div class="input-group mb-3">
+                        <label for="Age" class="input-group-text">
+                        <i class="fa-solid fa-hashtag"></i>
+                        </label>
+                      <input type="text" class="form-control" placeholder="Age *" name="age" id="Age" aria-label="Username" aria-describedby="basic-addon1" onblur="checkInput(this)" data-valid="false">
+                    </div>
+                    <p class="alert alert-danger d-none" role="alert" data-error-name="age"></p>
+                    <div class="input-group mb-3">
+                        <label for="Phone" class="input-group-text">
+                        <i class="fa-solid fa-mobile"></i>
+                        </label>
+                      <input type="text" class="form-control" placeholder="Phone *" name="phone" id="Phone" aria-label="Username" aria-describedby="basic-addon1" onblur="checkInput(this)" data-valid="false">
+                    </div>
+                    <p class="alert alert-danger d-none" role="alert" data-error-name="phone"></p>
+                    <button class="btn btn-success  w-100">Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="Search">
+       <div class="container">
+            <form action="">
+                <div class="input-group m-auto mb-3">
+                    <label for="Search" class="input-group-text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="text" class="form-control" placeholder="Search..." name="Search" id="Search"  aria-label="Username">
+             </div>
+            </form>
+       </div>
+    </section>
+    <section id="Data" class="my-5 ">
+        <div class="table-responsive m-auto">
+            <table class="table table-light table-striped  mb-0">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Option</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-warning text-center">
+                    <td colspan="7" id="Alert"></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="js/function.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
