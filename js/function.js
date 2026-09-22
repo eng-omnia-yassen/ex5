@@ -22,7 +22,7 @@ function addStudent() {
     students.push(student)
     updateLocalStorage()
     showStudent(student)
-    isNoData()
+    isNoData(student)
     clearForm();
 }
 
@@ -81,11 +81,16 @@ function updateLocalStorage() {
     localStorage.setItem('students', JSON.stringify(students))
 }
 
-function showStudents() {
-    students.forEach(function (student) {
+function showStudents(data) {
+    table.innerHTML=`
+        <tr class="table-warning text-center">
+            <td colspan="7" id="Alert"></td>
+        </tr>
+    `;
+    data.forEach(function (student) {
         showStudent(student)
     })
-    isNoData()
+    isNoData(data)
 }
 
 function findStudentIndex(id) {
@@ -104,13 +109,13 @@ function deleteStudent(id, that) {
     trEle = that.closest("tr");
     trEle.remove();
     updateLocalStorage();
-    isNoData()
+    isNoData(students)
 
 }
 
-function isNoData() {
+function isNoData(data) {
     let emptyTableAlert = document.querySelector("#Alert");
-    if (students.length == 0) {
+    if (data.length == 0) {
         emptyTableAlert.classList.remove("d-none");
         emptyTableAlert.textContent = "There are no data"
     } else {
@@ -171,8 +176,6 @@ function insertEditInToForm(id) {
     })
 }
 
-
-
 function editStudent() {
     
     let studentId = form.getAttribute("data-id"),
@@ -198,4 +201,15 @@ function editStudent() {
     updateLocalStorage();
     clearForm()
     editFormBtn("add")
+}
+
+function search(searchValue){
+    let filterStudents= students.filter(function(student){
+        return student.firstName.toLowerCase().includes(searchValue.toLowerCase()) ||
+         student.lastName.toLowerCase().includes(searchValue.toLowerCase()) ||
+         student.email.toLowerCase().includes(searchValue.toLowerCase()) ||
+         student.age.toLowerCase().includes(searchValue.toLowerCase()) ||
+         student.phone.toLowerCase().includes(searchValue.toLowerCase()); 
+    });
+    showStudents(filterStudents)
 }

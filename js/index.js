@@ -10,14 +10,14 @@ regexInputs={
 },
 id=0,
 table=document.querySelector('table tbody'),
-reloadIcon=document.querySelector("#Register .body form>i");
-
+reloadIcon=document.querySelector("#Register .body form>i"),
+searchInput=document.querySelector("#SearchInput");
 if(localStorage.getItem('students') == null){
     updateLocalStorage()
 }else {
     students=JSON.parse(localStorage.getItem('students'));
     id=students[students.length -1]?.id ?? 0;
-    showStudents()   
+    showStudents(students)   
 }
 
 form.addEventListener("submit",function(e){
@@ -28,4 +28,8 @@ form.addEventListener("submit",function(e){
     }else if(formType == "edit" ){
         editStudent()
     }
+})
+
+searchInput.addEventListener("keyup",function(){
+    search(this.value)
 })
