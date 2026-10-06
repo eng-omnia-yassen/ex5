@@ -5,7 +5,7 @@ regexInputs={
     firstName:/^[A-Za-z]+$/,
     lastName:/^[A-Za-z]+$/,
     email:/^[A-Za-z\_][A-Za-z0-9\.\-]+@(gmail|yahoo)\.(com|org)$/,
-    age:/^[1-9][0-9]$/,
+    age:/^[1-9]{1}[0-9]{1}$/,
     phone:/^(02)?01(1|2|0|5)[0-9]{8}$/
 },
 id=0,
