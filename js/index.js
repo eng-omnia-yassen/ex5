@@ -27,6 +27,7 @@ form.addEventListener("submit",function(e){
         addStudent()
     }else if(formType == "edit" ){
         editStudent()
+        form.dataset.type='add'
     }
 })
 

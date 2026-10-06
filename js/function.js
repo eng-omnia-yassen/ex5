@@ -6,6 +6,7 @@ function getStudent(id) {
         let key = input.name,
             value = input.value;
         student[key] = value
+        input.dataset.valid='false'
     })
     return student
 }
@@ -23,7 +24,7 @@ function addStudent() {
     updateLocalStorage()
     showStudent(student)
     isNoData(student)
-    clearForm();
+    clearForm();    
 }
 
 function showStudent(student) {
@@ -144,7 +145,7 @@ function editFormBtn(type){
         tableBtn.forEach(function (btn) {
             btn.classList.add("disabled")
         })
-        reloadIcon.classList.remove("d-none")
+        reloadIcon.classList.remove("d-none");
     }else if(type == "add"){
         formBtn.textContent = "Add";
         formBtn.classList.remove("btn-info");
